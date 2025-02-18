@@ -19,10 +19,11 @@ const Navigation = ({
 
   const navLinks = [
     { text: "Home", url: "/" },
-    { text: "Services", url: "/services" },
-    { text: "About", url: "/about" },
-    { text: "Contact", url: "/contact" },
+    { text: "Painting", url: "/painting" },
+    { text: "Drywall", url: "/drywall" },
+    { text: "Commercial", url: "/commercial" },
     { text: "Gallery", url: "/gallery" },
+    { text: "Contact", url: "/contact" },
   ];
 
   return (
@@ -40,7 +41,7 @@ const Navigation = ({
             <div className="relative w-48 h-12">
               <Image
                 src="/logo.webp"
-                alt="Drywall Burnaby"
+                alt="WallPro Repairs & Finishing"
                 fill
                 className="object-contain object-left"
                 priority
@@ -69,10 +70,10 @@ const Navigation = ({
                 </a>
               ))}
               <a
-                href="tel:+1(778)658-0035"
+                href="tel:+1(778)653-4724"
                 className="ml-4 inline-flex items-center justify-center bg-gray-900 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
               >
-                (778) 658-0035
+                (778) 653-4724
               </a>
             </div>
           </div>
@@ -80,7 +81,7 @@ const Navigation = ({
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
             <a
-              href="tel:+1(778)658-0035"
+              href="tel:+1(778)653-4724"
               className="inline-flex items-center justify-center bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
             >
               Call Now

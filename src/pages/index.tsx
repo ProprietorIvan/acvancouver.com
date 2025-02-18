@@ -11,6 +11,7 @@ import {
   Building2,
   Home,
   Check,
+  Paintbrush,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -27,7 +28,7 @@ interface FormData {
   projectDetails: string;
 }
 
-const BurnabyDrywallLandingPage = () => {
+const VancouverWallProLandingPage = () => {
   const [customerType, setCustomerType] = useState<CustomerType>(null);
   const [facilityType, setFacilityType] = useState("");
   const [urgency, setUrgency] = useState("");
@@ -57,7 +58,6 @@ const BurnabyDrywallLandingPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     const submissionData = {
       ...formData,
       customerType,
@@ -65,97 +65,94 @@ const BurnabyDrywallLandingPage = () => {
       urgency,
       projectSize,
     };
-
-    // Handle form submission logic here
     setShowSuccess(true);
   };
 
   const handleEmergencyCall = () => {
-    window.location.href = "tel:+1(778)658-0035";
-
-    const yourhome = document.querySelector("#contactform");
-    if (yourhome) {
-      yourhome.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    window.location.href = "tel:+1(778)653-4724";
+    const contactForm = document.querySelector("#contactform");
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: "smooth", inline: "nearest" });
     }
   };
 
   // SEO-friendly data
   const pageTitle =
-    "Burnaby's Premier Drywall Experts | Fast & Reliable Repairs";
+    "WallPro Repairs & Finishing | Vancouver's Expert Painters & Drywall Specialists";
   const pageDescription =
-    "Looking for top drywall repair and installation services in Burnaby? Our certified team guarantees 2-hour response times and exceptional workmanship.";
+    "Professional painting and drywall services in Vancouver & Burnaby. Our skilled team delivers premium finishes and reliable repairs with exceptional attention to detail.";
 
   const serviceFeatures = [
     {
-      icon: <Building2 className="w-6 h-6" />,
-      title: "Burnaby Experts",
-      description: "Your local drywall repair specialists",
+      icon: <Paintbrush className="w-6 h-6" />,
+      title: "Vancouver Experts",
+      description: "Your local painting and drywall specialists",
     },
     {
       icon: <Ruler className="w-6 h-6" />,
-      title: "Premium Solutions",
-      description: "Industry-leading materials and techniques",
+      title: "Quality Craftsmanship",
+      description: "Premium materials and expert techniques",
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Fast Response",
-      description: "2-hour response time guaranteed",
+      title: "Reliable Service",
+      description: "Prompt response and efficient completion",
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Certified Results",
-      description: "Licensed and insured in Burnaby",
+      title: "Guaranteed Work",
+      description: "Licensed and insured in Vancouver",
     },
   ];
 
   const serviceTypes = [
     {
-      title: "Wall Repair",
+      title: "Painting Services",
       points: [
-        "Water damage restoration",
-        "Hole patching",
-        "Crack repair",
-        "Surface finishing",
+        "Interior painting",
+        "Exterior painting",
+        "Color consultation",
+        "Texture finishing",
       ],
     },
     {
-      title: "Commercial Services",
+      title: "Drywall Solutions",
       points: [
-        "Office renovations",
-        "Retail space repairs",
-        "Industrial solutions",
-        "Multi-unit projects",
-      ],
-    },
-    {
-      title: "Expert Finishing",
-      points: [
+        "Damage repair",
+        "Installation",
         "Texture matching",
-        "Paint blending",
-        "Seamless repairs",
-        "Premium materials",
+        "Complete renovations",
+      ],
+    },
+    {
+      title: "Professional Finishing",
+      points: [
+        "Custom textures",
+        "Smooth finishes",
+        "Color matching",
+        "Premium coatings",
       ],
     },
     {
       title: "Additional Services",
       points: [
-        "Ceiling repairs",
-        "Corner bead installation",
-        "Sound insulation",
-        "Complete remodels",
+        "Wall repairs",
+        "Popcorn removal",
+        "Surface preparation",
+        "Trim & detail work",
       ],
     },
   ];
 
   const facilityTypes = [
-    "Office Building",
-    "Retail Store",
+    "Office Space",
+    "Retail Location",
     "Restaurant",
-    "Warehouse",
-    "Medical Facility",
-    "Educational Institution",
-    "Hotel/Hospitality",
-    "Industrial Space",
+    "Residential Building",
+    "Medical Office",
+    "Educational Facility",
+    "Hotel",
+    "Industrial Facility",
   ];
 
   return (
@@ -166,13 +163,13 @@ const BurnabyDrywallLandingPage = () => {
         <meta name="description" content={pageDescription} />
         <meta
           name="keywords"
-          content="burnaby drywall, drywall repair burnaby, drywall installation, commercial drywall, burnaby renovations"
+          content="vancouver painting, vancouver drywall, wall repairs vancouver, professional painters vancouver, commercial painting, residential painting"
         />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://drywallburnaby.com" />
-        <link rel="canonical" href="https://drywallburnaby.com" />
+        <meta property="og:url" content="https://acvancouver.com" />
+        <link rel="canonical" href="https://acvancouver.com" />
       </Head>
 
       <Navigation transparent />
@@ -184,15 +181,15 @@ const BurnabyDrywallLandingPage = () => {
           <div className="flex flex-col md:flex-row gap-12 items-center py-16">
             <div className="w-full md:w-1/2">
               <div className="inline-block bg-gray-900 text-white px-4 py-1 rounded-full text-sm font-medium mb-6">
-                Burnaby&apos;s Premier Drywall Experts
+                Vancouvers Premium Painting & Drywall Experts
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
-                Expert drywall repair.
-                <span className="block text-gray-900">Flawless results.</span>
+                Professional finishes.
+                <span className="block text-gray-900">Lasting quality.</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Burnaby&apos;s trusted drywall repair specialists for homes and
-                businesses. From small patches to complete renovations.
+                Vancouvers trusted painting and drywall specialists for homes
+                and businesses. From touch-ups to complete transformations.
               </p>
 
               <button
@@ -200,16 +197,16 @@ const BurnabyDrywallLandingPage = () => {
                 className="group inline-flex items-center justify-center gap-3 bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-all duration-300"
               >
                 <Phone className="w-6 h-6" />
-                <span>Get Started Now</span>
+                <span>Get Your Quote</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
 
             <div className="w-full md:w-1/2">
-              <div className="relative h-[600px] w-full">
+              <div className="relative h-96 w-full">
                 <Image
                   src="/photos/homepage/2.jpg"
-                  alt="Burnaby Professional Drywall"
+                  alt="Vancouver Professional Painting & Drywall"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover rounded-xl"
@@ -227,10 +224,10 @@ const BurnabyDrywallLandingPage = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">
-              Premium Drywall Services
+              Premium Painting & Drywall Services
             </h2>
             <p className="text-lg text-gray-600">
-              Burnaby&apos;s most trusted repair specialists
+              Vancouvers most trusted painting and repair specialists
             </p>
           </div>
 
@@ -257,7 +254,8 @@ const BurnabyDrywallLandingPage = () => {
               Our Services
             </h2>
             <p className="text-lg text-gray-600">
-              Comprehensive drywall solutions for Burnaby properties
+              Comprehensive painting and drywall solutions for Vancouver
+              properties
             </p>
           </div>
 
@@ -292,7 +290,7 @@ const BurnabyDrywallLandingPage = () => {
               Request a Quote
             </h2>
             <p className="text-lg text-gray-600">
-              2-hour response • Burnaby-wide service
+              Professional service • Vancouver & Burnaby coverage
             </p>
           </div>
 
@@ -327,7 +325,7 @@ const BurnabyDrywallLandingPage = () => {
                       >
                         Residential
                       </h3>
-                      <p className="text-sm text-gray-600">Home repairs</p>
+                      <p className="text-sm text-gray-600">Home services</p>
                     </div>
                   </div>
                 </button>
@@ -525,7 +523,7 @@ const BurnabyDrywallLandingPage = () => {
               )}
 
               <p className="text-sm text-gray-600 text-center">
-                2-hour response • Expert service • Burnaby certified
+                Professional service • Expert team • Vancouver certified
               </p>
             </form>
           </div>
@@ -538,15 +536,16 @@ const BurnabyDrywallLandingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
-                Proven Excellence
+                Quality You Can Trust
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Our certified team delivers comprehensive drywall solutions,
-                transforming Burnaby properties with precision and expertise.
+                Our certified team delivers exceptional painting and drywall
+                solutions, transforming Vancouver properties with precision and
+                expertise.
               </p>
               <ul className="space-y-4">
                 {[
-                  "Professional damage assessment",
+                  "Professional color consultation",
                   "BC-certified processes",
                   "Premium materials",
                   "Satisfaction guaranteed",
@@ -561,7 +560,7 @@ const BurnabyDrywallLandingPage = () => {
             <div className="relative h-[500px]">
               <Image
                 src="/photos/homepage/1.jpg"
-                alt="Burnaby Drywall Excellence"
+                alt="Vancouver Painting Excellence"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover rounded-xl"
@@ -581,32 +580,33 @@ const BurnabyDrywallLandingPage = () => {
               Common Questions
             </h2>
             <p className="text-lg text-gray-600">
-              Everything you need to know about our drywall services in Burnaby
+              Everything you need to know about our painting and drywall
+              services
             </p>
           </div>
 
           <div className="space-y-6">
             {[
               {
-                question: "How quickly can you respond to emergency repairs?",
+                question: "What areas do you service?",
                 answer:
-                  "We guarantee a 2-hour response time for emergency services across Burnaby. Our team is available 24/7 to handle urgent drywall repairs.",
+                  "We provide comprehensive painting and drywall services throughout Vancouver and Burnaby, covering both residential and commercial properties.",
               },
               {
                 question:
                   "Do you handle both residential and commercial projects?",
                 answer:
-                  "Yes, we specialize in both residential and commercial drywall services. From small home repairs to large-scale commercial renovations, our team has the expertise to handle any project in Burnaby.",
+                  "Yes, we specialize in both residential and commercial services. From home painting to large-scale commercial renovations, our team has the expertise to handle any project.",
               },
               {
                 question: "Are you licensed and insured?",
                 answer:
-                  "Absolutely. We are fully licensed and insured in Burnaby, providing you complete peace of mind for any drywall project we undertake.",
+                  "Absolutely. We are fully licensed and insured in Vancouver, providing you complete peace of mind for any project we undertake.",
               },
               {
-                question: "What types of drywall services do you offer?",
+                question: "What types of painting services do you offer?",
                 answer:
-                  "We offer a comprehensive range of services including water damage repair, hole patching, crack repair, texture matching, complete wall installations, and professional finishing.",
+                  "We offer a comprehensive range of services including interior and exterior painting, color consultation, texture matching, drywall repair, and professional finishing.",
               },
             ].map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-xl">
@@ -624,17 +624,17 @@ const BurnabyDrywallLandingPage = () => {
       <section className="py-16 bg-gray-900">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Burnaby&apos;s Trusted Drywall Experts
+            Vancouvers Trusted Painting & Drywall Experts
           </h2>
           <p className="text-xl mb-8 text-gray-300">
-            Professional drywall services across Burnaby
+            Professional services across Vancouver & Burnaby
           </p>
           <button
             onClick={handleEmergencyCall}
             className="group inline-flex items-center justify-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition-all duration-300"
           >
             <Phone className="w-6 h-6" />
-            <span>Call (778) 658-0035</span>
+            <span>Call (778) 653-4724</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
@@ -655,18 +655,20 @@ const SuccessScreen = ({
       <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-4">
         <Check className="w-8 h-8 text-green-500" />
       </div>
-      <h3 className="text-2xl font-medium text-gray-900">Message received</h3>
+      <h3 className="text-2xl font-medium text-gray-900">
+        Quote Request Received
+      </h3>
 
       <div className="space-y-2 text-center">
-        <p className="text-gray-600">We&apos;ll get back to you shortly</p>
+        <p className="text-gray-600">We will get back to you shortly</p>
         <p className="text-gray-500 text-sm">
-          Response will be sent to office@drywallburnaby.com
+          Response will be sent to {email}
         </p>
       </div>
 
       <button
         onClick={() => setShowSuccess(false)}
-        className="mt-8 bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-[#ffc527] hover:text-black"
+        className="mt-8 bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors duration-300"
       >
         Done
       </button>
@@ -674,4 +676,4 @@ const SuccessScreen = ({
   );
 };
 
-export default BurnabyDrywallLandingPage;
+export default VancouverWallProLandingPage;
