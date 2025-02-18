@@ -19,7 +19,7 @@ const Footer = () => {
           {/* About Us Section */}
           <div className="md:col-span-2">
             <h3 className="text-xl font-semibold mb-4">
-              Vancouver's Painting & Drywall Experts
+              Vancouvers Painting & Drywall Experts
             </h3>
             <div className="h-1 w-16 bg-white mb-6"></div>
             <p className="text-gray-300 mb-6 leading-relaxed">
